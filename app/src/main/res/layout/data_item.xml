@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:id="@+id/card"
+    android:clickable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/typeCalculation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tipo do calculo" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@+id/typeCalculation"
+            app:layout_constraintStart_toStartOf="@+id/typeCalculation"
+            app:layout_constraintTop_toBottomOf="@+id/typeCalculation"
+            tools:text="Valor de entrada" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/monthTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@+id/value"
+            app:layout_constraintStart_toStartOf="@+id/value"
+            app:layout_constraintTop_toBottomOf="@+id/value"
+            tools:text="Meses" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@+id/monthTime"
+            app:layout_constraintStart_toStartOf="@+id/monthTime"
+            app:layout_constraintTop_toBottomOf="@+id/monthTime"
+            tools:text="Taxa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@+id/rate"
+            app:layout_constraintStart_toStartOf="@+id/rate"
+            app:layout_constraintTop_toBottomOf="@+id/rate"
+            tools:text="result" />
+
+        <ImageButton
+            android:id="@+id/btnDell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_delete_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

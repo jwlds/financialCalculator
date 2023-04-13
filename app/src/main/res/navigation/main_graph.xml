@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/calculateFutureFragment"
+        android:name="com.example.calculadorafincanceira.ui.calculate.CalculateFutureFragment"
+        android:label="CalculateFutureFragment" />
+    <fragment
+        android:id="@+id/calculatePresentFragment"
+        android:name="com.example.calculadorafincanceira.ui.calculate.CalculatePresentFragment"
+        android:label="CalculatePresentFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.calculadorafincanceira.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_memoryListFragment"
+            app:destination="@id/memoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memoryListFragment"
+        android:name="com.example.calculadorafincanceira.ui.calculate.MemoryListFragment"
+        android:label="fragment_memory_list"
+        tools:layout="@layout/fragment_memory_list" />
+</navigation>
